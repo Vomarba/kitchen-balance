@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" , "ru">
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    <title>Кухня</title>
+    <link href="libraries/style.css" rel="stylesheet">
+      <script src="libraries/p5.js"></script>
+      <script src="libraries/p5.dom.js"></script>
+      <script src="libraries/sketch.js"></script>
+  </head>
+
+  <body>
+  <div class="clearfix">
+
+    <div id="kitchen">
+      <h1>Кухня</h1>
+        <p>
+      Масло подсолнечное: <span id="sunflower_oil"></span><br />
+      Хлеб: <span id="bread"></span><br />
+      Хлеб Харрис: <span id="bread_harrys"></span><br />
+      Лаваш: <span id="pita"></span><br />
+      Пельмени: <span id="meat_dumplings"></span><br />
+      Ветчина: <span id="ham"></span><br />
+      Крылья: <span id="wings"></span><br />
+      Наггетсы: <span id="nuggets"></span><br />
+      Стрипсы: <span id="strips"></span><br />
+      Колбаски: <span id="sausages"></span><br />
+      Сырные монетки: <span id="cheese_coins"></span><br />
+      Сырные палочки: <span id="cheese_sticks"></span><br />
+      Фри: <span id="free"></span><br />
+      Луковые кольца: <span id="onion_rings"></span><br />
+      Картофельные чипсы: <span id="potato_chips"></span><br />
+      Шампиньоны: <span id="сhampignon"></span><br />
+      Начос: <span id="nachos"></span><br />
+      Сыр: <span id="cheese"></span><br />
+      Сыр плавленный: <span id="melted_cheese"></span><br />
+      Чеснок: <span id="garlic"></span><br />
+      Соленый огурец: <span id="pickle"></span><br />
+      Фасоль: <span id="beans"></span><br />
+      Морковь по-корейски: <span id="korean_carrot"></span><br />
+      Горчица Баварская: <span id="mustard_bavarian"></span><br />
+      Сметана: <span id="sour_cream"></span><br />
+      Майонез: <span id="mayonnaise"></span><br />
+      Кетчуп: <span id="ketchup"></span><br />
+      Кисло-сладкий: <span id="sweet_and_sour"></span><br />
+      Барбекю: <span id="bbq"></span><br />
+      Сальса: <span id="salsa"></span><br />
+      Сырный: <span id="cheese_sauce"></span><br />
+      Чесночный: <span id="garlic_sauce"></span><br />
+    </p>
+    </div>
+
+    <div id="bar">
+      <h1>Бар</h1>
+      <p>
+        Кофе: <span id="coffe"></span><br />
+        Молоко: <span id="milk"></span><br />
+        Лимон: <span id="lemon"></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+      </p>
+    </div>
+    
+    <div id="chemical">
+      <h1>Химия</h1>
+      <p>
+        Пемо-люкс: <span id="pemo_lux"></span><br />
+        Крем-мыло: <span id="cream_soap"></span><br />
+        Средство для посуды: <span id="dish_detergent"></span><br />
+        Губчатые салфетки: <span id="sponge_napkins"></span><br />
+        Губки: <span id="sponges"></span><br />
+        Полотенца бумажные: <span id="paper_towels"></span><br />
+        Перчатки одноразовые: <span id="disposable_gloves"></span><br />
+        Перчатки многоразовые: <span id="reusable_gloves"></span><br />
+        Тряпка половая: <span id="floor_cloth"></span><br />
+        Фольга: <span id="foil"></span><br />
+        Пергамент: <span id="parchment"></span><br />
+        Металлические губки: <span id="metal_sponges"></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+        <span id=""></span><br />
+
+      </p>
+    </div>
+
+    </div>
+
+  </div>
+
+  <div id="BaM_on_map"></div>
+
+  <script>
+  getData();
+
+    const mymap = L.map('BaM_on_map').setView([53.9477578, 27.6972513], 18);
+    const attribution =
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+      const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      const tiles = L.tileLayer(tileUrl, { attribution });
+      tiles.addTo(mymap);
+
+      const marker = L.marker([53.9477578, 27.6972512]).addTo(mymap);
+
+   
+
+    async function getData() {
+      const response = await fetch('test.json');
+      const data = await response.json();
+      const { подсолнечное_масло, хлеб, хлеб_харрис, лаваш, пельмени, ветчина, крылья, наггетсы, стрипсы, колбаски, сырные_монетки, сырные_палочки, фри, луковые_кольца, картофельные_чипсы, шампиньоны, начос, сыр, сыр_плавленный, чеснок, соленый_огурец, фасоль, морковь_по_корейски, горчица_баварская, сметана, майонез, кетчуп, кисло_сладкий, барбекю, сальса, сырный, чесночный, кофе, молоко, лимон, пемо_люкс, крем_мыло, средство_для_посуды, губчатые_салфетки, губки,  полотенца_бумажные, перчатки_одноразовые, перчатки_многоразовые, тряпка_половая, фольга, пергамент, металлические_губки } = data;
+     
+
+
+      document.getElementById('sunflower_oil').textContent = подсолнечное_масло;
+      document.getElementById('bread').textContent = хлеб;
+      document.getElementById('bread_harrys').textContent = хлеб_харрис;
+      document.getElementById('pita').textContent = лаваш;
+      document.getElementById('meat_dumplings').textContent = пельмени;
+      document.getElementById('ham').textContent = ветчина;
+      document.getElementById('wings').textContent = крылья;
+      document.getElementById('nuggets').textContent = наггетсы;
+      document.getElementById('strips').textContent = стрипсы;
+      document.getElementById('sausages').textContent = колбаски;
+      document.getElementById('cheese_coins').textContent = сырные_монетки;
+      document.getElementById('cheese_sticks').textContent = сырные_палочки;
+      document.getElementById('free').textContent = фри;
+      document.getElementById('onion_rings').textContent = луковые_кольца;
+      document.getElementById('potato_chips').textContent = картофельные_чипсы;
+      document.getElementById('сhampignon').textContent = шампиньоны;
+      document.getElementById('nachos').textContent = начос;
+      document.getElementById('cheese').textContent = сыр;
+      document.getElementById('melted_cheese').textContent = сыр_плавленный;
+      document.getElementById('garlic').textContent = чеснок;
+      document.getElementById('pickle').textContent = соленый_огурец;
+      document.getElementById('beans').textContent = фасоль;
+      document.getElementById('korean_carrot').textContent = морковь_по_корейски;
+      document.getElementById('mustard_bavarian').textContent = горчица_баварская;
+      document.getElementById('sour_cream').textContent = сметана;
+      document.getElementById('mayonnaise').textContent = майонез;
+      document.getElementById('ketchup').textContent = кетчуп;
+      document.getElementById('sweet_and_sour').textContent = кисло_сладкий;
+      document.getElementById('bbq').textContent = барбекю;
+      document.getElementById('salsa').textContent = сальса;
+      document.getElementById('cheese_sauce').textContent = сырный;
+      document.getElementById('garlic_sauce').textContent = чесночный;
+
+      document.getElementById('coffe').textContent = кофе;
+      document.getElementById('milk').textContent = молоко;
+      document.getElementById('lemon').textContent = лимон;
+
+      document.getElementById('pemo_lux').textContent = пемо_люкс;
+      document.getElementById('cream_soap').textContent = крем_мыло;
+      document.getElementById('dish_detergent').textContent = средство_для_посуды;
+      document.getElementById('sponge_napkins').textContent = губчатые_салфетки;
+      document.getElementById('sponges').textContent = губки;
+      document.getElementById('paper_towels').textContent = полотенца_бумажные;
+      document.getElementById('disposable_gloves').textContent = перчатки_одноразовые;
+      document.getElementById('reusable_gloves').textContent = перчатки_многоразовые;
+      document.getElementById('floor_cloth').textContent = тряпка_половая;
+      document.getElementById('foil').textContent = фольга;
+      document.getElementById('parchment').textContent = пергамент;
+      document.getElementById('metal_sponges').textContent = металлические_губки;
+
+      
+    }
+  </script>
+
+  
+  </body>
+</html>

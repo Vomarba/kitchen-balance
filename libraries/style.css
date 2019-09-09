@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.1em;
+  font-family: sans-serif, Arial, Helvetica;
+}
+p {
+  padding-left: 1em;
+}
+
+h1 {
+  text-align: center;
+
+  text-decoration: underline;
+}
+#kitchen {
+  background-color: #d62246;
+  width: 33%;
+  padding-left: 0.5em;
+  float: left;
+}
+#bar {
+  background-color: #d4f4dd;
+  width: 33%;
+  padding-left: 0.5em;
+  float: left;
+}
+#chemical {
+  background-color: #17bebb;
+  width: 33%;
+  padding-left: 0.5em;
+  float: left;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#BaM_on_map {
+  height: 360px;
+}
